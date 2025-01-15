@@ -3,7 +3,8 @@ import java.util.ArrayList;
 
 public class AddBooks {
 
-    public static void addBook(ArrayList<Books> books, Scanner sc){
+    public static void addBook(ArrayList<Books> books){
+        Scanner sc = new Scanner(System.in);  
         Books book = new Books(); 
         int ID;
         
@@ -25,14 +26,15 @@ public class AddBooks {
         System.out.println("Enter book author: ");
         book.setAuthor(sc.nextLine());
 
-        System.out.println("Enter publish year: ");
+        System.out.println("Enter publish date: ");
         book.setYear(sc.nextInt());
 
         books.add(book);
 
         System.out.println("\n" + "Book successfully added: '" + book.getTitle() + "' by: " + book.getAuthor() + ", written in " + book.getYear() + 
         ", with ID number: " + book.getID() + "\n");
- 
+          
     }   
-    
+
+   
 }
